@@ -11,8 +11,8 @@ import News from "./pages/News";
 
 function App() {
   return (
-    <BrowserRouter basename="/FEDF-UI-Individual-IPL-Project-React-Version-">
-      <Header />
+    <BrowserRouter> 
+    <Header />
       <Navbar />
 
       <Routes>
