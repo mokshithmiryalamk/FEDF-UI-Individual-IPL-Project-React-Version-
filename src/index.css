@@ -1,0 +1,873 @@
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif !important;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    font-weight: 600;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: linear-gradient(to right, #0a1a44, #13274f);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 5px;
+    color: #cbd5e1;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    background-color: #111c3d;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #facc15;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+/* ================= MAIN ================= */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    color: #facc15;
+    margin-bottom: 20px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    border-radius: 12px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #facc15;
+    color: #000;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #eab308;
+    transform: scale(1.05);
+}
+
+/* ================= QUICK STATS ================= */
+.quick-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 70px 0;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: #1e293b;
+    padding: 30px;
+    width: 180px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.stat-card h3 {
+    font-size: 32px;
+    color: #facc15;
+}
+
+.stat-card p {
+    color: #cbd5e1;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+}
+
+/* ================= HOME TOP TEAMS ================= */
+.home-top-teams h2 {
+    margin-bottom: 25px;
+}
+
+.home-teams-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.home-team-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.home-team-card:hover {
+    background: #273449;
+    transform: scale(1.03);
+}
+
+/* ================= CTA SECTION ================= */
+.home-cta {
+    margin: 70px 0;
+    text-align: center;
+}
+
+.home-cta p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+/* ================= TEAMS PAGE ================= */
+.teams {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.team {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+}
+
+.team:hover {
+    transform: translateY(-8px);
+    background-color: #273449;
+    cursor: pointer;
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e293b;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #334155;
+}
+
+th {
+    background-color: #13274f;
+    color: #facc15;
+}
+
+tr:nth-child(even) {
+    background-color: #273449;
+}
+
+tr {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+tr:hover {
+    background-color: #334155;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* ================= QUALIFIED BADGE ================= */
+
+.qualified td:first-child {
+    position: relative;
+    font-weight: bold;
+}
+
+.qualified td:first-child::before {
+    content: "Q";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1db954;
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+/* ================= TABLE LEGEND ================= */
+.table-legend {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+.legend-q {
+    display: inline-block;
+    background-color: #1db954;
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 6px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+/* ================= MATCHES ================= */
+.matches {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.match {
+    display: flex;
+    justify-content: space-between;
+    background: #1e293b;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+}
+
+.match:hover {
+    transform: scale(1.02);
+    background-color: #273449;
+}
+
+/* Winner / Loser */
+.winner {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.loser {
+    color: #ef4444;
+}
+
+.final-match .winner {
+    color: #facc15;
+    font-weight: bold;
+}
+
+/* ================= CHAMPIONS ================= */
+.champions {
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #d4af37;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= NEWS ================= */
+.news-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.news-box {
+    flex: 1 1 220px;
+    max-width: 250px;
+    background-color: #1e293b;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: left;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+}
+
+.news-box h4 {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #facc15;
+}
+
+.news-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #0a1a44;
+    color: #e2e8f0;
+    padding: 20px 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .match {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .teams,
+    .home-teams-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ================= FIXTURES LAYOUT ================= */
+
+.fixtures-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.fixtures-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+/* ================= Fixtures Cards (Dark Theme) ================= */
+
+.match-card {
+    background: linear-gradient(145deg, #0f172a, #1e293b);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #facc15; /* IPL gold accent */
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Match number */
+.match-number {
+    font-size: 14px;
+    font-weight: 600;
+    color: #facc15;
+    margin-bottom: 10px;
+}
+
+/* Score row */
+.match-score-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+/* Left & Right team alignment */
+.team-score:first-child {
+    text-align: left;
+}
+
+.team-score:last-child {
+    text-align: right;
+}
+
+/* Result text */
+.match-result {
+    font-size: 14px;
+    color: #cbd5e1;
+    margin-top: 5px;
+}/* Playoff Redirect Card */
+
+.playoff-redirect {
+    text-decoration: none;
+}
+
+.playoff-card {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border: 2px solid #facc15;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.playoff-card:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(135deg, #1f2937, #111827);
+}
+
+.playoff-card h3 {
+    color: #facc15;
+    margin-bottom: 10px;
+}
+
+.playoff-card span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    opacity: 0.85;
+}
+/* ================= TEAM LINK CLEANUP ================= */
+
+/* Ensure team card links inherit card styling */
+.team a,
+.team a:visited,
+.team a:active,
+.team a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.team a {
+    display: block;
+    cursor: pointer;
+    font-weight: bold;   /* keeps same boldness as the card */
+}
+
+/* Slight spacing for the arrow */
+.team a::after {
+    content: " ↗";
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+.home-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= SUBSCRIBE FORM ================= */
+
+.subscribe-section{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+max-width:500px;
+margin:40px auto;
+box-shadow:0 4px 12px rgba(0,0,0,0.4);
+}
+
+.subscribe-section h2{
+text-align:center;
+margin-bottom:20px;
+color:#facc15;
+}
+
+.subscribe-section form{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.subscribe-section input{
+padding:10px;
+border-radius:6px;
+border:none;
+outline:none;
+}
+
+.subscribe-section button{
+background:#facc15;
+color:#000;
+padding:10px;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.subscribe-section button:hover{
+background:#eab308;
+}
+
+#formMessage{
+margin-top:10px;
+text-align:center;
+font-size:14px;
+color:red;
+}
+
+/* ================= FAVORITE TEAM ================= */
+
+.favorite-team{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+max-width:500px;
+margin:40px auto;
+text-align:center;
+box-shadow:0 4px 12px rgba(0,0,0,0.4);
+}
+
+.favorite-team h2{
+color:#facc15;
+margin-bottom:15px;
+}
+
+.favorite-team select{
+padding:10px;
+border-radius:6px;
+border:none;
+margin-right:10px;
+}
+
+.favorite-team button{
+background:#facc15;
+color:#000;
+padding:10px 15px;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.favorite-team button:hover{
+background:#eab308;
+}
+
+#favMessage{
+margin-top:10px;
+font-size:14px;
+}
+
+/* ================= FAVORITE TEAM HIGHLIGHT ================= */
+
+/* Points table row */
+.favorite-team-row {
+    background-color: #3b2f00 !important;
+    border-left: 5px solid #facc15;
+    font-weight: bold;
+}
+
+/* Team cards */
+.favorite-team-card{
+border:3px solid gold;
+background:#1c1c1c;
+transform:scale(1.05);
+box-shadow:0 0 10px gold;
+}
+
+/* Fixture matches */
+.favorite-match {
+    border-left: 4px solid lime;
+    background: #1b2b1b;
+}
+
+/* Team specific row colors */
+.favorite-CSK{ background-color:#3a2f00; }
+.favorite-MI{ background-color:#0b2b63; }
+.favorite-RCB{ background-color:#4a0f0f; }
+.favorite-GT{ background-color:#1f2937; }
+.favorite-LSG{ background-color:#083b3f; }
+.favorite-SRH{ background-color:#4a1d00; }
+.favorite-DC{ background-color:#0b2f6b; }
+.favorite-RR{ background-color:#4a0b2e; }
+.favorite-PBKS{ background-color:#4a0b0b; }
+.favorite-KKR{ background-color:#2a0845; }
+
+/* ================= THEME TOGGLE BUTTON ================= */
+.theme-toggle-btn {
+    padding: 6px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #facc15; /* gold accent */
+    color: #000;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #eab308;
+    transform: scale(1.05);
+}
+
+/* ================= FAVORITE TEAM HIGHLIGHT ================= */
+.favorite-win {
+    border-left: 5px solid #22c55e !important;
+    background: #12351f !important;
+}
+
+.favorite-loss {
+    border-left: 5px solid #ef4444 !important;
+    background: #3a1515 !important;
+}
+
+.favorite-nr {
+    border-left: 5px solid #a855f7 !important;
+    background: #2e1065 !important;
+}
+
+.favorite-banner{
+    margin-top: 10px;
+    font-weight: 600;
+    color: #facc15;
+    text-align: center;
+}
+
+/* ================= FIXTURE LEGEND ================= */
+.fixture-legend{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.legend-win,.legend-loss,.legend-nr{
+    font-weight:bold;
+}
+
+/* ================= POLISHED LIGHT THEME ================= */
+
+.light-theme {
+    background: linear-gradient(135deg, #eef6ff, #dbeafe) !important;
+    color: #0f172a !important;
+}
+
+.light-theme header {
+    background: linear-gradient(to right, #0057d9, #60a5fa);
+    color: white;
+}
+
+.light-theme header p {
+    color: #0f172a;
+}
+
+.light-theme nav {
+    background: linear-gradient(to right, #003f9e, #1d4ed8);
+}
+
+.light-theme footer {
+    background: linear-gradient(to right, #003f9e, #1d4ed8);
+    color: white;
+}
+
+.light-theme .hero,
+.light-theme .stat-card,
+.light-theme .home-team-card,
+.light-theme .team,
+.light-theme .match-card,
+.light-theme .news-box,
+.light-theme .favorite-team,
+.light-theme .subscribe-section,
+.light-theme .playoff-card {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
+}
+
+.light-theme .hero p,
+.light-theme .stat-card p,
+.light-theme .home-cta p,
+.light-theme .match-result {
+    color: #334155 !important;
+}
+
+.light-theme section h2,
+.light-theme .news-box h4,
+.light-theme .favorite-team h2,
+.light-theme .subscribe-section h2 {
+    color: #0f172a !important;
+}
+
+.light-theme .hero-btn,
+.light-theme .favorite-team button,
+.light-theme .subscribe-section button,
+.light-theme .theme-toggle-btn {
+    background: #facc15 !important;
+    color: #000 !important;
+}
+
+.light-theme table {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.light-theme th {
+    background: #2563eb !important;
+    color: #ffffff !important;
+}
+
+.light-theme tr {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.light-theme tr:nth-child(even) {
+    background: #f1f5f9 !important;
+}
+
+.light-theme tr:hover {
+    background: #dbeafe !important;
+}
+
+.light-theme td {
+    color: #0f172a !important;
+}
+
+.light-theme .favorite-team-card {
+    border: 2px solid #facc15 !important;
+    box-shadow: 0 0 12px rgba(250, 204, 21, 0.7);
+}
+
+.light-theme .favorite-team-row {
+    background: #fef3c7 !important;
+    border-left: 5px solid #facc15;
+}
+
+.light-theme .favorite-win {
+    background: #dcfce7 !important;
+    border-left: 5px solid #22c55e !important;
+}
+
+.light-theme .favorite-loss {
+    background: #fee2e2 !important;
+    border-left: 5px solid #ef4444 !important;
+}
+
+.light-theme .favorite-nr {
+    background: #ede9fe !important;
+    border-left: 5px solid #a855f7 !important;
+}
+
+/* ================= LIGHT THEME TEXT CONTRAST FIX ================= */
+
+.light-theme .match-score-row,
+.light-theme .team-score {
+    color: #0f172a !important;
+}
+
+.light-theme .match-card .match-result {
+    color: #334155 !important;
+}
+
+.light-theme .playoff-card h3,
+.light-theme .playoff-card p,
+.light-theme .playoff-card span {
+    color: #0f172a !important;
+}
+
+.light-theme .playoff-card .match-score-row,
+.light-theme .playoff-card .team-score {
+    color: #0f172a !important;
+}
+
+.light-theme .table-legend {
+    color: #334155 !important;
+}
+
+.light-theme header p {
+    color: #e2e8f0 !important;
+}
+
+/* ================= BETTER FAVORITE HIGHLIGHT ================= */
+
+.favorite-team-row {
+    background: linear-gradient(90deg, #5a4300, #2f2608) !important;
+    border-left: 5px solid #facc15;
+}
+
+.favorite-team-card {
+    border: 2px solid #facc15 !important;
+    background: linear-gradient(135deg, #2b2208, #1e293b) !important;
+    box-shadow: 0 0 14px rgba(250, 204, 21, 0.45);
+}
+
+.favorite-team-card:hover {
+    background: linear-gradient(135deg, #3b2f00, #273449) !important;
+    box-shadow: 0 0 18px rgba(250, 204, 21, 0.7);
+}
